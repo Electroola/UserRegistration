@@ -1,5 +1,12 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "username": "Admin",
+  "password": "admin123",
+  "wrongUsername": "admin1233",
+  "wrongPassword": "Admin2",
+  "LoginButton": ".oxd-button",
+  "UsernameLink": ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
+  "expected": "Dashboard",
+  "BlankUsername": "",
+  "BlankPassword": ""
+
 }

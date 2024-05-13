@@ -23,3 +23,63 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('clickASubmitButton', (einstein) => {
+
+    cy.get(einstein).should('be.visible').and('exist').click()
+    
+})
+
+Cypress.Commands.add('fillValidUserDetails', () => {
+    cy.fixture('example').then( (data)=>{
+
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.username)
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.password)
+    
+})
+
+})
+
+Cypress.Commands.add('fillInvalidUserDetails', () => {
+    cy.fixture('example').then( (data)=>{
+
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.wrongUsername)
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.wrongPassword)
+    
+})
+
+})
+
+Cypress.Commands.add('fillValidUserNameAndWrongPassword', () => {
+    cy.fixture('example').then( (data)=>{
+
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.username)
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.wrongPassword)
+    
+})
+
+})
+
+
+
+Cypress.Commands.add('fillInvalidUserNameAndValidPassword', () => {
+    cy.fixture('example').then( (data)=>{
+
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.wrongUsername)
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.password)
+    
+})
+
+})
+
+
+Cypress.Commands.add('blankUsenameAndPasword', () => {
+    cy.fixture('example').then( (data)=>{
+
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.BlankUsername)
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.BlankPassword)
+    
+})
+
+})
