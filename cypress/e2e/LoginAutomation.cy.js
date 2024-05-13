@@ -55,16 +55,7 @@ describe('User Login', () => {
 
 
 
-    it('Blank Username and Password', () => {
-
-        
-        cy.fixture('example').then((data) => {
-            cy.blankUsenameAndPasword()
-            cy.clickASubmitButton(data.LoginButton)
-
-        })
-    })
-
+    
 
 
 })

@@ -74,12 +74,3 @@ Cypress.Commands.add('fillInvalidUserNameAndValidPassword', () => {
 })
 
 
-Cypress.Commands.add('blankUsenameAndPasword', () => {
-    cy.fixture('example').then( (data)=>{
-
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.BlankUsername)
-    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.BlankPassword)
-    
-})
-
-})
