@@ -6,7 +6,7 @@
   "LoginButton": ".oxd-button",
   "UsernameLink": ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
   "expected": "Dashboard",
-  "BlankUsername": "",
-  "BlankPassword": ""
+  "BlankUsername": "null",
+  "BlankPassword": "null"
 
 }
